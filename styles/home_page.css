@@ -1,0 +1,18 @@
+
+body{
+    background-color: rgba(246, 242, 242, 0.859);
+}
+
+.car_photo{
+    width: 90%;
+    min-width: 15vw; /* 15% dostepnej szerkosci ekranu tj. viewportu */
+  }
+
+  .title{
+      background-color: rgb(5, 5, 74);
+  }
+  
+  .main_title{
+      color: rgba(240, 228, 228, 0.963);
+  }
+  
