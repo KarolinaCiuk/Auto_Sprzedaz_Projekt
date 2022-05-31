@@ -13,49 +13,72 @@
   <body>
     <main>
       <h1 class="form_title jumbotron text-center">Formularz</h1>
+      <section id="choosenCar"></section>
       <section class="client_inputs text-center">
         <div class="car_info">
           <p>
-            <span class="data_label">Auto:</span>
-            <span class="data_value" id="selected_car"></span>
-          </p>
-          <p>
             <span class="data_label">Cena:</span>
-            <span class="data_value" id="selected_car_price"></span>
+            <span class="data_value selected_car_price" id="selected_car_price"></span>
           </p>
         </div>
         <hr />
 
-
-        <div class="client_data">
+        <section class="client_data">
           <h4 class="client_data_header">Dane Kupującego:</h4>
           <p>
-            <label>Imię i nazwiko</label>
-            <input class="name_input" id="name_input" type="text"/>
-            
+            <label class="col-md-6">Imię i nazwisko</label>
+            <input class="name_input col-md-6" id="fullNameInput" type="text" />
+            <span class="fullNameValid"></span>
           </p>
-          
-        </div>
-        <hr />
-        <div class="pickup_date">
+          <p>
+            <label class="col-md-6">Telefon</label>
+            <input class="col-md-6 phoneNumberInput" id="phoneNumberInput" type="text" />
+            <span class="phoneNumberValid"></span>
+          </p>
+          <p>
+            <label class="col-md-6">Mail</label>
+            <input class="col-md-6 mail_input" id="mailInput" type="text" />
+            <span class="mailValid"></span>
+          </p>
+          <hr />
+        </section>
+
+        <section class="pickup_date">
           <h4 class="client_data_header">Data odbioru auta:</h4>
           <input id="input_date" type="date" />
-        </div>
-        <hr />
-        <div class="payment_method">
+          <hr />
+        </section>
+
+        <section class="payment_method">
           <h4 class="client_data_header">Wybierz metodę płatności</h4>
           <p>
-            <input type="radio" name="payment" id="leasing" />
+            <input type="radio" name="payment" id="formLeasing" />
             <label>Leasing</label>
           </p>
           <p>
-            <input type="radio" name="payment" id="cash" />
+            <input type="radio" name="payment" id="formCash" />
             <label>Gotówka</label>
-          </p>        
-        </div>
-        <hr />
+          </p>
+          <hr />
+        </section>
 
 
+        <!-- AKCESORIA DO DOKOŃCZENIA -->
+        <!-- <section class="carAccessories">
+          <h4 class="client_data_header">Dodaj akcesoria</h4>
+          <form action="/action_page.php">
+            <input type="checkbox" />
+            <label id="accessory"> Zestaw opon</label><br />
+            <label id="price"> 700 </label><br />
+            <input type="checkbox" />
+            <label id="accessory"> Podgrzewane siedzenia</label><br />
+            <label id="price"> 1500 </label><br />
+            <input type="checkbox" />
+            <label id="accessory"> Kamera cofania</label><br /><br />
+            <label id="price"> 1900 </label><br /><br />
+          </form>
+        </section>
+        <hr /> -->
       </section>
       <section class="navigation_buttons">
         <button class="back_btn" id="back_btn">POWRÓT</button>
@@ -63,7 +86,8 @@
       </section>
     </main>
 
-    <script src="scripts/form.js"></script>
+    <script type="module" src="scripts/form.js"></script>
+    <script src="scripts/calendar.js"></script>
     <script src="bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
   </body>
 </html>
